@@ -7,7 +7,7 @@ Aashish Rai*, Hiresh Gupta*, Ayush Pandey*, Fernando de la Torre, Shingo Jason T
 We propose a 3D face generative model that generates high-quality albedo and precise 3D shape by leveraging StyleGAN2, resulting in a photo-realistic rendered image.
 
 
-## [More Details Coming Soon...]
+## [More Details Coming Soon! Stay Tuned...]
 
 
 ![](figures/face_gen_2.jpg)
