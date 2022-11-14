@@ -1,4 +1,4 @@
-# Towards-Realistic-Generative-3D-Face-Models
+# Towards Realistic Generative 3D Face Models
 
 Aashish Rai*, Hiresh Gupta*, Ayush Pandey*, Fernando de la Torre, Shingo Jason Takagi, Amaury Aubel, Daeil Kim, Aayush Prakash
 
