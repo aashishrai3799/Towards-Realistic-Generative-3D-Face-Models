@@ -2,4 +2,6 @@
 3D face model that can generate high-quality mesh and texture
 
 
-![](figures/face_gen_2.jpg.png)
+![](figures/face_gen_2.jpg)
+
+![](figures/supp_image.jpg)
