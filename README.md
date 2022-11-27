@@ -4,6 +4,8 @@ Aashish Rai*, Hiresh Gupta*, Ayush Pandey*, Fernando de la Torre, Shingo Jason T
 
 ### Carnegie Mellon University, Facebook/Meta
 
+[[Project Page](https://aashishrai3799.github.io/Towards-Realistic-Generative-3D-Face-Models)]
+
 We propose a 3D face generative model that generates high-quality albedo and precise 3D shape by leveraging StyleGAN2, resulting in a photo-realistic rendered image.
 
 
