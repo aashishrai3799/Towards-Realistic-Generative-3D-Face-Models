@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Controllable 3D Generative Adversarial Face Model via Disentangling Shape and Appearance">
+  <meta name="keywords" content="GAN, Face Synthesis, Mesh">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Towards Realistic Generative 3D Face Models</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="shortcut icon" href="./assets/block.png">
+
+
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Towards Realistic Generative 3D Face Models</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              
+              <a href="https://aashishrai3799.github.io/">Aashish Rai</a><sup>*1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://hireshgupta1997.github.io/">Hiresh Gupta</a><sup>*1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="#">Ayush Pandey</a><sup>*1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://www.cs.cmu.edu/~ftorre/">Fernando de la Torre</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <br>
+              <a href="#">Shingo Jason Takagi</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="#">Amaury Aubel</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="#">Daeil Kim</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://aayushp.github.io/">Aayush Prakash</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              
+              <br><sup>1</sup>Carnegie Mellon University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup>Facebook/Meta <br>
+              <br>
+          </div>
+
+<!--           <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Facebook AI Research,</span>
+            <span class="author-block"><sup>2</sup>Carnegie Mellon University</span>
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="./assets/in_review.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2208.14263"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://drive.google.com/file/d/1PqIN4Rzp4vapWs2pUegUEoMhg4lM2Smy/view?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/aashishrai3799/Towards-Realistic-Generative-3D-Face-Models/" 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop height="100%">
+            <source src="./assets/videos/1_smile.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop height="100%">
+            <source src="./assets/videos/2_mouth_stretch.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop height="100%">
+            <source src="./assets/videos/19_brow_lower.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop height="100%">
+            <source src="./assets/videos/14_lip_roll.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop height="100%">
+            <source src="./assets/videos/17_eye_closed.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop height="100%">
+            <source src="./assets/videos/18_brow_raiser.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<center> <h1>More details coming soon... Stay tuned!</h1> </center>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent years have witnessed a significant advancement
+            in 2D generative face models fueled by applications in an-
+            imation, synthetic data generation, and digital avatars. Al-
+            though these 2D models have attained incredible realism,
+            they inaccurately decouple attributes like pose, expression,
+            or illumination due to the lack of 3D information. To ad-
+            dress these limitations, this paper proposes a 3D face gener-
+            ative model that generates high-quality albedo and precise
+            3D shape by leveraging StyleGAN2, resulting in a photo-
+            realistic rendered image. We present an alternate descent
+            optimization in a self-supervised manner to bring Style-
+            GAN2 samples to 3D using a differentiable renderer. In par-
+            ticular, we propose AlbedoGAN, a model to generate albedo
+            with the same corresponding latent space. Our framework
+            produces a detailed 3D mesh, pose, expression, and lighting
+            by leveraging a face recognition backbone and a detailed
+            shape estimator. The model estimates a detailed 3D face
+            mesh and preserves the identity of the rendered faces better
+            than existing techniques. Our framework inherits the bene-
+            fits of 2D face generative models such as StyleGAN, and we
+            bring semantic face manipulation into 3D. We demonstrate
+            direct control of expressions in 3D faces by manipulating
+            latent codes and text-based editing of 3D faces.
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Abstract. -->
+
+
+  <!-- Paper video. -->
+<!--  <br/>
+  <br/>
+  <div id="method_video" class="columns is-centered has-text-centered">
+    <div class="column is-two-thirds">
+      <h2 class="title is-2">Video</h2>
+      <div class="publication-video">
+<!--         <video controls>
+          <source src="./resources/spotlight.mp4"
+                  type="video/mp4">
+        </video> --> 
+<!--        <iframe src="https://www.youtube.com/embed/jNdtjF1VXU4?rel=0&showinfo=0&hd=1&vq=hd1080"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <!--/ Paper video. -->
+  
+</section>
+
+<br><br><br><br>
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered">
+      <div class="column is-8"> 
+      <center> <img style="width: 100%;" src="./assets/images/figure_1.png"> </center>
+<!--        <video id="teaser" autoplay muted loop height="100%">
+          <source src="./videos/3dv_2022_107.mp4"
+                  type="video/mp4">
+        </video> -->
+        <p align="justify">
+          Realistic rendered faces generated from our method. (a) Detailed mesh reconstructed (column-2) along with the rendered 3D
+          face (column-3) for a given input 2D image (column-1). (b) Expression changes by manipulating StyleGAN2’s W-space. (c) Text-based
+          editing using CLIP. First row is the original image and the second row is the edited face corresponding to the text query (Q). 
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2">Architecture</h2>
+        <div class="content has-text-justified">
+          <p>
+            Overview of our 3D generative model. The first step includes training an SAE, which projects shapes into two low dimensional
+embedding subspaces, one of which is dedicated to the identity factor while the other to the expression factor. In the second step, we utilize a
+cGAN network to sample shape and texture from their respective domains. A renderer is then used to generate photorealistic faces.
+          </p>
+          <center> <img  style="border: 2px solid #bbb; border-radius: 10px;" src="./assets/images/architecture_final_xx1.jpg"  width="1024"  height="800" /> </center>
+        </div>
+        <br/> -->
+
+        <!-- Interpolating. -->
+        <h2 class="title is-4">3D Face Reconstruction</h2>
+        <div class="content has-text-justified">
+          <p>
+            Randomly generated coarse mesh, detailed mesh and rendered faces from our model, corresponding to input 2D face.
+          </p>
+        </div>
+        <div class="is-vcentered interpolation-panel">
+          <div class="content has-text-centered">
+            <!-- <video style="border: 2px solid #bbb; border-radius: 10px; width: 80%;" autoplay muted loop>
+              <source src="./assets/videos/extrapolation_smile_combined.mp4"
+                      type="video/mp4">
+            </video> -->
+            <center> <img style="width: 60%;" src="./assets/images/supp_image.jpg"> </center>
+          </div>
+          <div class="content has-text-centered">
+
+          </div>
+        </div>
+        <br/>
+        <br/>
+        
+        
+        
+        
+        <h2 class="title is-4">Text-based Editing</h2>
+        <div class="content has-text-justified">
+          <p>
+            We demonstrated the use of our pipeline in text-based editing of 3D faces. 
+            The following figure shows text based editing on 3D faces generated from our framework. 
+            Top image in each pair is the original image. Bottom one is the edited image based on given text query.
+          </p>
+        </div>
+        <div class="is-vcentered interpolation-panel">
+          <div class="content has-text-centered">
+            <center> <img style="width: 40%;" src="./assets/images/supp_text.png"> </center>
+          </div>
+          <div class="content has-text-centered">
+          </div>
+        </div>
+        <br/>
+        <br/>
+
+
+
+
+        <h2 class="title is-4">Illumination Control</h2>
+        <div class="content has-text-justified">
+          <p>
+            We can control the direction of light using light parameter. Figure shows light falling from five different directions.
+          </p>
+        </div>
+        <div class="is-vcentered interpolation-panel">
+            <center> <img style="width: 40%;" src="./assets/images/supp_illum.png"> </center>
+          <div class="content has-text-centered">
+          </div>
+        </div>
+        <br/>
+        <br/>
+
+
+
+
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+<!--        <h3 class="title is-4">Failure cases</h3>
+        <div class="content has-text-justified">
+          <p>
+            Sometimes artifacts occur when the depth is discontinuous around the object boundary. For instance, the boundary of the flower or the tree is blurry. We hope to address these issues in future work by segmenting the Worldsheet around depth boundaries.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video style="border: 1px solid #bbb; border-radius: 10px;"
+                 controls
+                 muted
+                 width="35%">
+            <source src="./resources/compressed_no_mesh_scenery11_pad.mp4"
+                    type="video/mp4">
+          </video>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <video style="border: 1px solid #bbb; border-radius: 10px;"
+                 controls
+                 muted
+                 width="35%">
+            <source src="./resources/compressed_no_mesh_paris_pad.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ Animation. -->  
+     
+
+   
+  </div>
+</section>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="titile">BibTeX</h2>
+    <pre><code>
+  Coming soon...
+</code></pre>
+  </div>
+</section> -->
+
+
+
+<section class="section" id="LICENSE">
+  <div class="container content">
+    <h2 class="titile">License</h2>
+    <pre><code>
+    <!-- The code is available under X11 License. Please read the license terms available at <a href="https://github.com/aashishrai3799/3DFaceCAM/blob/main/LICENSE/">[Link]</a>. Quick summary available at <a href="https://www.tldrlegal.com/l/x11">[Link]</a>. -->
+    License information coming soon...
+</code></pre>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a href="https://arxiv.org/pdf/2208.14263.pdf" class="large-font bottom_buttons">
+        <i class="fas fa-file-pdf"></i>
+      </a> -->
+      <a href="https://github.com/aashishrai3799/3DFaceCAM/" class="large-font bottom_buttons">
+        <i class="fab fa-github"></i>
+      </a>
+      <br />
+      <p>Page template borrowed from <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a>.</p>
+      <p>Copyright © 2022 Carnegie Mellon University</p>
+<!--      <p><a href="https://opensource.facebook.com/legal/terms">Terms of Use</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://opensource.facebook.com/legal/privacy">Privacy Policy</a></p> -->
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
