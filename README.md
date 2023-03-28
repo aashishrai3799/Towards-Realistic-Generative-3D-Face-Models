@@ -12,6 +12,6 @@ We propose a 3D face generative model that generates high-quality albedo and pre
 ## [More Details Coming Soon! Stay Tuned...]
 
 
-![](face_gen_2.jpg)
+![](figure_1.png)
 
-![](supp_image.jpg)
+![](supp_image.png)
