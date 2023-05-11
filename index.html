@@ -303,16 +303,28 @@ cGAN network to sample shape and texture from their respective domains. A render
         <h2 class="title is-4">Illumination Control</h2>
         <div class="content has-text-justified">
           <p>
-            We can control the direction of light using light parameter. Figure shows light falling from five different directions.
+            We can control the direction of light using SH parameters. Video shows illumination control from random directions.
           </p>
         </div>
         <div class="is-vcentered interpolation-panel">
-            <center> <img style="width: 80%;" src="./assets/images/supp_illum.png"> </center>
+            <!-- <center> <img style="width: 80%;" src="./assets/images/supp_illum.png"> </center> -->
+            
+            <div class="is-vcentered interpolation-panel">
+          <div class="content has-text-centered">
+            <video style="border: 2px solid #bbb; border-radius: 10px; width: 50%;" autoplay muted loop>
+              <source src="./assets/videos/illum_control.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content has-text-centered">
+            
           <div class="content has-text-centered">
           </div>
         </div>
         <br/>
         <br/>
+        
+        
 
 
 
@@ -375,6 +387,24 @@ cGAN network to sample shape and texture from their respective domains. A render
 </section>
 
 
+<section class="section" id="LICENSE">
+  <div class="container content">
+    <h2 class="titile">BibTex</h2>
+    <pre><code>
+    <!-- The code is available under X11 License. Please read the license terms available at <a href="https://github.com/aashishrai3799/3DFaceCAM/blob/main/LICENSE/">[Link]</a>. Quick summary available at <a href="https://www.tldrlegal.com/l/x11">[Link]</a>. -->
+    @article{rai2023towards,
+  		title={Towards Realistic Generative 3D Face Models},
+  		author={Rai, Aashish and Gupta, Hiresh and Pandey, Ayush and Carrasco, Francisco Vicente and Takagi, Shingo Jason and Aubel, Amaury and Kim, Daeil and Prakash, Aayush and De la Torre, Fernando},
+  		journal={arXiv preprint arXiv:2304.12483},
+  		year={2023}
+ 		}
+
+
+</code></pre>
+  </div>
+</section>
+
+
 
 <footer class="footer">
   <div class="container">
@@ -387,7 +417,7 @@ cGAN network to sample shape and texture from their respective domains. A render
       </a>
       <br />
       <p>Page template borrowed from <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a>.</p>
-      <p>Copyright © 2022 Carnegie Mellon University</p>
+      <p>Copyright © 2023 Carnegie Mellon University</p>
 <!--      <p><a href="https://opensource.facebook.com/legal/terms">Terms of Use</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://opensource.facebook.com/legal/privacy">Privacy Policy</a></p> -->
     </div>
   </div>
