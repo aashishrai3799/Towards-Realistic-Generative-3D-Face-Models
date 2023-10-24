@@ -1,4 +1,4 @@
-# Towards Realistic Generative 3D Face Models
+# Towards Realistic Generative 3D Face Models (AlbedoGAN)
 
 Aashish Rai, Hiresh Gupta*, Ayush Pandey*,  Francisco Vicente Carrasco, Shingo Jason Takagi, Amaury Aubel, Daeil Kim, Aayush Prakash, Fernando de la Torre
 
