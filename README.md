@@ -47,19 +47,19 @@ Download AlbedoGAN modified weights from the following [[LINK](https://drive.goo
 ## Acknowledgements
 
 For functions or scripts that are based on external sources, we acknowledge the origin individually in each file.
-Our code is inspired by the following code repositories. Please make sure to refer to their license terms before downloading the pre-trained weights.
+Our code is inspired by the following code repositories. Please make sure to refer to their and our license terms before downloading the pre-trained weights.
 
 1. [[DECA](https://github.com/yfeng95/DECA)]
 2. [[MICA](https://github.com/Zielon/MICA)]
 3. [[FLAME](https://github.com/soubhiksanyal/FLAME_PyTorch)]
     
-## License
+## License Terms
 
 The code is available under X11 License. Please read the license terms available at [[Link](https://github.com/aashishrai3799/Towards-Realistic-Generative-3D-Face-Models/blob/main/LICENSE)]. Quick summary available at [[Link](https://www.tldrlegal.com/l/x11)].
 
 ## Citation
 
-If you use find this paper/code useful, please consider citing:
+If you find this paper/code useful, please consider citing:
 
 ```
 @article{rai2023towards,
