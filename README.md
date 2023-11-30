@@ -39,6 +39,14 @@ Download AlbedoGAN modified weights from the following [[LINK](https://drive.goo
 
 ## Training code will be released at the earliest convenience. 
 
+## Acknowledgements
+
+For functions or scripts that are based on external sources, we acknowledge the origin individually in each file.
+Our code is inspired by the following code repositories. Please make sure to refer to their license terms before downloading the pre-trained weights.
+
+1. [[DECA](https://github.com/yfeng95/DECA)]
+2. [[MICA](https://github.com/Zielon/MICA)]
+3. [[FLAME](https://github.com/soubhiksanyal/FLAME_PyTorch)]
     
 ## License
 
