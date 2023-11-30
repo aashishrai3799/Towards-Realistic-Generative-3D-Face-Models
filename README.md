@@ -37,6 +37,11 @@ Download AlbedoGAN modified weights from the following [[LINK](https://drive.goo
     python demos/demo_reconstruct.py
     ```
 
+- Generate multi-pose videos
+    ```
+    python videos.py
+    ```
+
 ## Training code will be released at the earliest convenience. 
 
 ## Acknowledgements
