@@ -25,7 +25,7 @@ Download pre-trained models and put in the respective folders.
 Follow [[MICA](https://github.com/Zielon/MICA)] to download insightface and MICA pre-trained models. Put the weights in 'insightface' and 'data/mica_pretrained' folders, respectively.
 Follow [[DECA](https://github.com/yfeng95/DECA)] to download DECA pre-trained weights. Put them in the 'data' folder.
 
-Download AlbedoGAN modified weights from the following [[LINK]([gdrive](https://drive.google.com/drive/folders/1nJw8rUBTLcyhvCMTDohE_KcKKtFI6Orm?usp=sharing))]. Put these modified ArcFace backbone and DECA weights to generate better reconstruction results.
+Download AlbedoGAN modified weights from the following [[LINK](https://drive.google.com/drive/folders/1nJw8rUBTLcyhvCMTDohE_KcKKtFI6Orm?usp=sharing)]. Put these modified ArcFace backbone and DECA weights to generate better reconstruction results.
 
 - Generate Random 3D Faces (mesh and texture)
     ```
@@ -42,7 +42,7 @@ Download AlbedoGAN modified weights from the following [[LINK]([gdrive](https://
     
 ## License
 
-The code is available under X11 License. Please read the license terms available at [[Link]([https://github.com/aashishrai3799/3DFaceCAM/blob/main/LICENSE](https://github.com/aashishrai3799/Towards-Realistic-Generative-3D-Face-Models/blob/main/LICENSE))]. Quick summary available at [[Link](https://www.tldrlegal.com/l/x11)].
+The code is available under X11 License. Please read the license terms available at [[Link](https://github.com/aashishrai3799/Towards-Realistic-Generative-3D-Face-Models/blob/main/LICENSE)]. Quick summary available at [[Link](https://www.tldrlegal.com/l/x11)].
 
 ## Citation
 
