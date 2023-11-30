@@ -25,7 +25,7 @@ Download pre-trained models and put in the respective folders.
 Follow [[MICA](https://github.com/Zielon/MICA)] to download insightface and MICA pre-trained models. Put the weights in 'insightface' and 'data/mica_pretrained' folders, respectively.
 Follow [[DECA](https://github.com/yfeng95/DECA)] to download DECA pre-trained weights. Put them in the 'data' folder.
 
-Download AlbedoGAN modified weights from the following [[LINK](gdrive)]
+Download AlbedoGAN modified weights from the following [[LINK](gdrive)]. Put these modified ArcFace backbone and DECA weights to generate better reconstruction results.
 
 - Generate Random 3D Faces (mesh and texture)
     ```
