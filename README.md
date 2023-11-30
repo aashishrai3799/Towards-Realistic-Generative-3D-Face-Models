@@ -16,7 +16,7 @@ We propose a 3D face generative model that generates high-quality albedo and pre
 ![](supp_image.png)
 
 
-## Testing
+## Inference
 
 Conda environment: Refer environment.yml
 
