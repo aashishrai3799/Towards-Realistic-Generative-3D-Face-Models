@@ -11,9 +11,23 @@ Aashish Rai, Hiresh Gupta*, Ayush Pandey*,  Francisco Vicente Carrasco, Shingo J
 We propose a 3D face generative model that generates high-quality albedo and precise 3D shape by leveraging StyleGAN2, resulting in a photo-realistic rendered image.
 
 
-## [Code Coming Soon! Stay Tuned...]
-
-
 ![](figure_1.png)
 
 ![](supp_image.png)
+
+
+## Testing
+
+Conda environment: Refer environment.yml
+
+Download pre-trained weights and put the "checkpoints" in the respective folders. [[Link](tbd)]
+
+- Generate Random 3D Faces (mesh and texture)
+    ```
+    python demos/demo_generate.py
+    ```
+    
+- Reconstruct 3D Faces from 2D Images
+    ```
+    python demos/demo_reconstruct.py
+    ```
