@@ -39,7 +39,7 @@ Download AlbedoGAN modified weights from the following [[LINK](https://drive.goo
 
 - Generate multi-pose videos
     ```
-    python videos.py
+    python video.py
     ```
 
 ## Training code will be released at the earliest convenience. 
@@ -61,7 +61,7 @@ The code is available under X11 License. Please read the license terms available
 
 If you find this paper/code useful, please consider citing:
 
-```
+```bibtex
 @article{rai2023towards,
   		title={Towards Realistic Generative 3D Face Models},
   		author={Rai, Aashish and Gupta, Hiresh and Pandey, Ayush and Carrasco, Francisco Vicente and Takagi, Shingo Jason and Aubel, Amaury and Kim, Daeil and Prakash, Aayush and De la Torre, Fernando},
