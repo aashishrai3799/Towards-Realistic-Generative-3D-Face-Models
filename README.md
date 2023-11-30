@@ -2,7 +2,7 @@
 
 Aashish Rai, Hiresh Gupta*, Ayush Pandey*,  Francisco Vicente Carrasco, Shingo Jason Takagi, Amaury Aubel, Daeil Kim, Aayush Prakash, Fernando de la Torre
 
-### Carnegie Mellon University, Facebook/Meta
+### Carnegie Mellon University, Meta Reality Labs
 
 ### WACV 2024 
 
